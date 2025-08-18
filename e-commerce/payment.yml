@@ -1,0 +1,36 @@
+Model/Schema/Object:
+
+- id: Number
+- order_id: Number
+- user_id: Number
+- amount: Number
+- method[credit_card, paypal, bank_transfer]: String
+- status[pending, completed, failed, refunded]: String
+- transaction_date: Date
+
+Usecases:
+- Process a new payment
+- Get all payments (admin)
+- Get payment by id
+- Refund a payment
+- Get all payments by user
+
+Endpoints:
+
+Create payment:
+POST: http://127.0.0.1:8000/api/v1/payments/
+
+List all payments:
+GET: http://127.0.0.1:8000/api/v1/payments/
+
+Get payment by id:
+GET: http://127.0.0.1:8000/api/v1/payments/{payment_id}/
+
+Refund payment:
+PATCH: http://127.0.0.1:8000/api/v1/payments/{payment_id}/refund/
+
+Get all payments by user:
+GET: http://127.0.0.1:8000/api/v1/users/{user_id}/payments/
+
+Delete payment record:
+DELETE: http://127.0.0.1:8000/api/v1/payments/{payment_id}/

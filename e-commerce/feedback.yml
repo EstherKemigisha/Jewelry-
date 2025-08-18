@@ -1,0 +1,32 @@
+Model/Schema/Object:
+
+- id: Number
+- product_id: Number
+- user_id: Number
+- rating: Number (1-5)
+- comment: String
+- created_at: Date
+
+Usecases:
+- Submit feedback for a product
+- Edit feedback
+- Delete feedback
+- Get all feedback for a product
+- Get all feedback from a user
+
+Endpoints:
+
+Create feedback:
+POST: http://127.0.0.1:8000/api/v1/feedback/
+
+Get feedback for a product:
+GET: http://127.0.0.1:8000/api/v1/feedback/product/{product_id}
+
+Get feedback by a user:
+GET: http://127.0.0.1:8000/api/v1/feedback/user/{user_id}
+
+Update feedback:
+PATCH: http://127.0.0.1:8000/api/v1/feedback/{feedback_id}/
+
+Delete feedback:
+DELETE: http://127.0.0.1:8000/api/v1/feedback/{feedback_id}/

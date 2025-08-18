@@ -1,0 +1,32 @@
+Model/Schema/Object:
+- id: Number
+- order_id: Number
+- status[pending, shipped, delivered, returned]: String
+- tracking_number: String
+- carrier: String
+- estimated_delivery: Date
+- actual_delivery: Date
+
+Usecases:
+- Create fulfilment record
+- Get fulfilment by id
+- Update fulfilment status
+- Add tracking info
+- Get fulfilment by order id
+
+Endpoints:
+
+Create fulfilment:
+POST: http://127.0.0.1:8000/api/v1/fulfilments/
+
+Get fulfilment by id:
+GET: http://127.0.0.1:8000/api/v1/fulfilments/{fulfilment_id}
+
+Update fulfilment:
+PATCH: http://127.0.0.1:8000/api/v1/fulfilments/{fulfilment_id}/
+
+Get fulfilment for an order:
+GET: http://127.0.0.1:8000/api/v1/orders/{order_id}/fulfilment/
+
+Delete fulfilment record:
+DELETE: http://127.0.0.1:8000/api/v1/fulfilment/{fulfilment_id}/

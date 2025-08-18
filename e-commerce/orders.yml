@@ -1,0 +1,38 @@
+Model/Schema/Object:
+
+- id: Number
+- user_id: Number
+- total_amount: Number
+- status[pending, confirmed, shipped, delivered, cancelled]: String
+- payment_id: Number
+- fulfilment_id: Number
+- created_at: Date
+- updated_at: Date
+
+Usecases:
+- Create a new order
+- Get all orders (admin)
+- Get orders by user
+- Get order by id
+- Update order status
+- Cancel an order
+
+Endpoints:
+
+Create order:
+POST: http://127.0.0.1:8000/api/v1/orders/
+
+List all orders (admin):
+GET: http://127.0.0.1:8000/api/v1/orders/
+
+Get orders by user:
+GET: http://127.0.0.1:8000/api/v1/orders/user/{user_id}
+
+Get order by id:
+GET: http://127.0.0.1:8000/api/v1/orders/{order_id}
+
+Update order status:
+PATCH: http://127.0.0.1:8000/api/v1/orders/{order_id}/
+
+Cancel order:
+DELETE: http://127.0.0.1:8000/api/v1/orders/{order_id}/cancel
