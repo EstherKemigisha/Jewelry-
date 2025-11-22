@@ -5,10 +5,7 @@
   <!-- Hero Section -->
   <section id="home" class="section home-section fade-in">
     <div class="video-container">
-      <video autoplay muted loop playsinline>
-        <source :src="videoSrc" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <img :src="videoSrc" alt="Hero Image" />
     </div>
     <div class="home-content">
       <h1>✨ Welcome to KHOHAV ✨</h1>
@@ -168,7 +165,6 @@ import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 
 // Assets
-import video from './assets/jev.mp4'
 import gold from './assets/gold.jpg'
 import earings from './assets/earings.jpg'
 import hear from './assets/hear.jpg'
@@ -178,7 +174,7 @@ import ten from './assets/ten.jpg'
 import beauty from './assets/beauty.png'
 import yey from './assets/yey.jpg'
 
-const videoSrc = video
+const videoSrc = gold
 const checkoutProduct = ref(null)
 const selectedPayment = ref('Mobile Money (MTN/Airtel)')
 
@@ -235,7 +231,7 @@ function handleContactSubmit() {
   z-index: -1;
 }
 
-.video-container video {
+.video-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
