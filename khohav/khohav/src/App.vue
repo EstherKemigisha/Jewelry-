@@ -14,7 +14,7 @@
     </div>
   </section>
 
-  <!-- About Us Section -->
+  
   <section id="about" class="section fade-in black-background about-section">
     <h2 class="about-title">About Us</h2>
     <div class="about-container">
