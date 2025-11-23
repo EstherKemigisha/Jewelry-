@@ -165,6 +165,7 @@ import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 
 // Assets
+import gold from './assets/gold.jpg'
 import khohav from './assets/khohav.png'
 import earings from './assets/earings.jpg'
 import hear from './assets/hear.jpg'
