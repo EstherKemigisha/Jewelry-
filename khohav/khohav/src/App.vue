@@ -2,7 +2,7 @@
   <div>
     <Navbar />
 
-  <!-- Hero Section -->
+
   <section id="home" class="section home-section fade-in">
     <div class="video-container">
       <img :src="videoSrc" alt="Hero Image" />
